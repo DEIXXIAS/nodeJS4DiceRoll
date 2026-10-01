@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Rolling Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<!-- This allows the "rollDice" function to execute as soon as the page is loaded-->
+<body onload="rollDice()">  
+    <!--This class is the intructions that display the program and -->
+    <main class="game-container">
+        <header>
+            <h1>🎲 Dice Rolling AI</h1>
+            <p class="instructions">
+                Roll two six-sided dice and see your results. 
+                Click <strong>Roll Dice</strong> or press <strong>Enter</strong>
+                to roll again. Your total is calculated automatically.
+            </p>
+        </header>
+        <!--This field group is assigning the 1st dice roll from the function rollDice() and reads it/Displays the "Die 1" -->
+        <section class="dice-card">
+            <div class="field-group">
+                <label for="die1">Die 1</label>
+                <input
+                    type="text"
+                    id="die1_value"
+                    readonly
+                    aria-label="Result of die one"
+                >
+            </div>
+            <!--This field group will grab the total after the function rollDice is executed and read the value given for die 2 -->
+            <div class="field-group">
+                <label for="die2">Die 2</label>
+                <input
+                    type="text"
+                    id="die2_value"  
+                    readonly
+                    aria-label="Result of die two"
+                >
+            </div>
+            <!--This field group will grab the total given within the rollDice function and reads the value-->
+            <div class="field-group total-field">
+                <label for="total">Total</label>
+                <input
+                    type="text"
+                    id="total_value"
+                    readonly
+                    aria-label="Total of both dice"
+                >
+            </div>
+            <!--Once the person clicks the button to "roll" or they click enter, the function rollDice will run grabbing the random values for both dice and adding them together-->
+            <button
+                id="rollButton"
+                onclick="rollDice()"
+                autofocus
+            >
+                Roll Dice
+            </button>
+        </section>
+        <!--This will display the message at the bottom of the "Roll Dice" button-->
+        <p id="message" class="message">Ready to roll!</p>
+    </main>
+    <!--inserting the JavaScript needed to run the "rollDice" function-->
+    <script src="script.js"></script>
+</body>
+</html>
