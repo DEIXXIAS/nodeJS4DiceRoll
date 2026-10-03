@@ -8,13 +8,13 @@
 </head>
 <!-- This allows the "rollDice" function to execute as soon as the page is loaded-->
 <body onload="rollDice()">  
-    <!--This class is the intructions that display the program and -->
+    <!--This class is the intructions that display the program -->
     <main class="game-container">
         <header>
             <h1>🎲 Dice Rolling AI</h1>
             <p class="instructions">
                 Roll two six-sided dice and see your results. 
-                Click <strong>Roll Dice</strong> or press <strong>Enter</strong>
+                Click <strong>Roll Dice</strong>
                 to roll again. Your total is calculated automatically.
             </p>
         </header>
@@ -34,9 +34,9 @@
                 <label for="die2">Die 2</label>
                 <input
                     type="text"
-                    id="die2_value"  
+                    id="die2_value"
                     readonly
-                    aria-label="Result of die two"
+                    aria-label="Result of die two" 
                 >
             </div>
             <!--This field group will grab the total given within the rollDice function and reads the value-->
@@ -62,6 +62,6 @@
         <p id="message" class="message">Ready to roll!</p>
     </main>
     <!--inserting the JavaScript needed to run the "rollDice" function-->
-    <script src="node.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
