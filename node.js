@@ -4,8 +4,10 @@ const app = express();
 const PORT = 3000
 
 
-app.use(express.static(__dirname + '/static'))
-app.use(cors({origin: '*'}))
+
+
+
+app.use(express.static(__dirname + '/frontend'))
 
 app.get('/api/diceRoll', (request, response) => {
     console.log('Calling "/api/diceRoll" on the Node.js server')
