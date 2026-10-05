@@ -1,11 +1,12 @@
 const express = require('express');
 const cors = require('cors');
 const app = express();
-const PORT = 3000
+const PORT = process.env.PORT || 3000;
 
+const allowedOrigins = ['https://ambitious-sand-0c847d410.1.azurestaticapps.net', 'http://localhost:5500'] 
 
-app.use(express.static(__dirname + '/static'))
-app.use(cors({origin: '*'}))
+// app.use(express.static(__dirname + '/static'))
+app.use(cors({origin: allowedOrigins}));
 
 app.get('/api/diceRoll', (request, response) => {
     console.log('Calling "/api/diceRoll" on the Node.js server')
@@ -15,9 +16,9 @@ app.get('/api/diceRoll', (request, response) => {
 })
 
 app.get('/api/ping', (request, response) => {
-    console.log('Calling /api/ping')
-    response.type('text/plain')
-    response.send('ping response')
+    console.log('Calling /api/ping');
+    response.type('text/plain');
+    response.send('ping response');
 })
 
 app.listen(PORT, () =>{
