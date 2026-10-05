@@ -1,3 +1,5 @@
+const API_CON = 'https://diceroller-bqc3begyeehgh0af.centralus-01.azurewebsites.net'
+const response = await fetch(`{API_CON}/api/diceRoll`)
 
 
 
