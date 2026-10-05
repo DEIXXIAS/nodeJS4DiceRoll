@@ -4,7 +4,6 @@
   "description": "this holds my index.js file to run dice roller",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
     "start": "node index.js"
   },
   "keywords": [],
