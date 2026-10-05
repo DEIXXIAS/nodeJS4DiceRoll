@@ -1,6 +1,9 @@
 
+
+
+
 async function rollDice(){
-    const response = await fetch(/api/diceRoll);
+    const response = await fetch(`/api/static`);
     const {die1, die2, total} = await response.json();
 
     document.getElementById("die1_value").value = die1;
